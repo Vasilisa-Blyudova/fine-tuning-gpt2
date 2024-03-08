@@ -16,3 +16,17 @@ jobs:
           python-version: "3.10"
       - name: Install dependencies
         run: bash config/venv_setup.sh
+
+#  mypy-checks:
+#    name: Mypy checks
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 5
+#    needs: [ install-dependencies ]
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Setup FIPL environment
+#        uses: actions/setup-python@v4
+#      - name: MyPy check
+#        run: |
+#          bash config/stage_1_style_tests/_stage_run_mypy.sh
