@@ -1,0 +1,17 @@
+name: "CI"
+
+on: push
+
+jobs:
+  install-dependencies:
+    name: Installing dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Confirming everything is OK
+        run: |
+          ls -la venv
+
+
+
