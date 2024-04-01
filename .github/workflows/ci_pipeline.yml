@@ -6,7 +6,7 @@ jobs:
   install-dependencies:
     name: Installing dependencies
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 6
 
     steps:
       - uses: actions/checkout@v3
@@ -16,3 +16,19 @@ jobs:
           python-version: "3.10"
       - name: Install dependencies
         run: bash config/venv_setup.sh
+
+#  flake8-checks:
+#    name: Import style checks
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 4
+#    needs: [ install-dependencies ]
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Set up Python
+#        uses: actions/setup-python@v4
+#        with:
+#          python-version: "3.10"
+#      - name: Flake8 check
+#        run: |
+#          bash config/_stage_run_flake8.sh
