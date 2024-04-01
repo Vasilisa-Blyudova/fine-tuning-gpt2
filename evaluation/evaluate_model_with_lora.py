@@ -1,11 +1,13 @@
 import pandas as pd
-from torch.utils.data import Dataset, DataLoader
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from evaluate import load
+from evaluate_model_without_lora import Evaluator, PromptBasedModel
 from peft import PeftModel
+from torch.utils.data import DataLoader, Dataset
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
+
 from config.constants import CHECKPOINT_WITH_LORA_PATH
 from data_preprocessor import DataImporter
-from evaluate_model_without_lora import PromptBasedModel, Evaluator
+
 
 class LoRAPromptBasedModel(PromptBasedModel):
     def __init__(self, model_dir, dataframe):

@@ -1,7 +1,10 @@
+import os
+import random
 import time
 
 import datasets
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import psutil
 import torch
@@ -11,11 +14,10 @@ from peft import LoraConfig, PeftModel, TaskType, get_peft_model
 from transformers import (DataCollatorForLanguageModeling, GPT2LMHeadModel,
                           GPT2Tokenizer, Trainer, TrainerCallback,
                           TrainerControl, TrainerState, TrainingArguments)
-import random
-import os
-import numpy as np
+
 from config.constants import MODEL_WITH_LORA_PATH
 from data_preprocessor import DataImporter, DataPreprocessor
+
 
 def seed_everything(seed: int):
     random.seed(seed)
