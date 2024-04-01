@@ -5,11 +5,10 @@ as well as a LoRA fine-tuning pipeline of GPT2 model.
 The **dataset** can be found [here](https://huggingface.co/datasets/wikitext).
 The **initial model** can be found [here](https://huggingface.co/openai-community/gpt2).
 Fine-tuning models can be found
-[here](https://drive.google.com/drive/folders/1EijPfZZW0t80OZUk3dJ1hmMcUAkMZub5?usp=sharing)
-and [here](https://drive.google.com/drive/folders/108sx3vnVkXg4KLqXlnl1y2vwAAP7NxsM?usp=sharing).
+[here](https://drive.google.com/drive/folders/19m0J3kwyaRbj7D4qaNIN-ST_G7N6Fgv4?usp=sharing).
 
 To test models, run the modules `inference_without_lora.py` and `inference_with_lora.py`. It is 
-located in [`inference` package](./inference).
+located in [inference](./inference).
 
 ### Results
 
