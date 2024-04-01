@@ -1,6 +1,7 @@
 accelerate==0.28.0
 datasets==2.18.0
 evaluate==0.4.1
+flake8==7.0.0
 isort==5.13.2
 matplotlib==3.8.3
 pandas==2.2.1
